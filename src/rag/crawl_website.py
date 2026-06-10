@@ -25,14 +25,18 @@ openai_client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 elasticsearch_client = ElasticsearchRAGClient()
 
 
+# MODIFIED: Added summary and separate embeddings for V2 Elasticsearch schema
 @dataclass
 class ProcessedChunk:
     url: str
     chunk_number: int
     title: str
+    summary: str  # MODIFIED: Added summary field
     content: str
     metadata: Dict[str, Any]
-    embedding: List[float]
+    title_embedding: List[float]  # MODIFIED: Separate embedding for title
+    summary_embedding: List[float]  # MODIFIED: Separate embedding for summary
+    content_embedding: List[float]  # MODIFIED: Separate embedding for content
 
 
 def chunk_text(text: str, chunk_size: int = 5000) -> List[str]:
@@ -81,12 +85,14 @@ def chunk_text(text: str, chunk_size: int = 5000) -> List[str]:
     return chunks
 
 
-async def get_title(chunk: str, url: str, content_type: str = "webpage") -> Dict[str, str]:
-    """Extract title using GPT-4."""
-    system_prompt = f"""You are an AI that extracts titles from {content_type} content chunks.
-    Return a JSON object with 'title' key.
+# MODIFIED: Changed from get_title to get_title_and_summary to generate both title and summary
+async def get_title_and_summary(chunk: str, url: str, content_type: str = "webpage") -> Dict[str, str]:
+    """Extract title and summary using GPT-4."""
+    system_prompt = f"""You are an AI that extracts titles and summaries from {content_type} content chunks.
+    Return a JSON object with 'title' and 'summary' keys.
     For the title: If this seems like the start of a document, extract its title. If it's a middle chunk, derive a descriptive title.
-    Keep title concise but informative."""
+    For the summary: Create a concise summary of the main points in this chunk. Please highlight the price of the product in the summary. As well as any highly relevant product details and technical specifications. Do not include any marketing or promotional language. The title should be as specific as possible. For example, AMD Ryzen 9 5900X - 3.7 GHz - 12 Cores - 24 Threads is great; AMD Ryzen 9 5900X Overview IS BAD.
+    Keep both title and summary concise but informative."""
 
     try:
         response = await openai_client.chat.completions.create(
@@ -101,8 +107,8 @@ async def get_title(chunk: str, url: str, content_type: str = "webpage") -> Dict
         )
         return json.loads(response.choices[0].message.content)
     except Exception as e:
-        print(f"Error getting title: {e}")
-        return {"title": "Error processing title"}
+        print(f"Error getting title and summary: {e}")
+        return {"title": "Error processing title", "summary": "Error processing summary"}
 
 
 async def get_embedding(text: str) -> List[float]:
@@ -120,11 +126,15 @@ async def get_embedding(text: str) -> List[float]:
 
 async def process_chunk(chunk: str, chunk_number: int, url: str, content_type: str = "webpage") -> ProcessedChunk:
     """Process a single chunk of text."""
-    # Get embedding
-    embedding = await get_embedding(chunk)
+    # MODIFIED: Generate title and summary together instead of just title
+    extracted = await get_title_and_summary(chunk, url, content_type)
 
-    # get title
-    extracted = await get_title(chunk, url, content_type)
+    # MODIFIED: Generate 3 separate embeddings for V2 schema (title, summary, content)
+    title_embedding, summary_embedding, content_embedding = await asyncio.gather(
+        get_embedding(extracted['title']),
+        get_embedding(extracted['summary']),
+        get_embedding(chunk)
+    )
 
     # Create metadata
     parsed_url = urlparse(url)
@@ -146,9 +156,12 @@ async def process_chunk(chunk: str, chunk_number: int, url: str, content_type: s
         url=url,
         chunk_number=chunk_number,
         title=extracted['title'],
-        content=chunk,  # Store the original chunk content
+        summary=extracted['summary'],  # MODIFIED: Added summary
+        content=chunk,
         metadata=metadata,
-        embedding=embedding
+        title_embedding=title_embedding,  # MODIFIED: Separate embeddings
+        summary_embedding=summary_embedding,
+        content_embedding=content_embedding
     )
 
 
@@ -156,13 +169,17 @@ async def insert_chunk(chunk: ProcessedChunk):
     """Insert a processed chunk into Elasticsearch."""
 
     try:
+        # MODIFIED: Send all 3 embeddings + summary to match V2 Elasticsearch schema
         data = {
             "url": chunk.url,
             "chunk_number": chunk.chunk_number,
             "title": chunk.title,
+            "summary": chunk.summary,
             "content": chunk.content,
             "metadata": chunk.metadata,
-            "embedding": chunk.embedding
+            "title_embedding": chunk.title_embedding,
+            "summary_embedding": chunk.summary_embedding,
+            "content_embedding": chunk.content_embedding
         }
 
         result = await elasticsearch_client.insert_chunk(data)
@@ -264,6 +281,7 @@ async def crawl_website(urls: List[str], max_concurrent: int = 5, reset_index: b
     browser_config = BrowserConfig(
         headless=True,
         verbose=False,
+        ignore_https_errors=True,
         extra_args=["--disable-gpu",
                     "--disable-dev-shm-usage", "--no-sandbox"],
     )
@@ -280,10 +298,10 @@ async def crawl_website(urls: List[str], max_concurrent: int = 5, reset_index: b
         async def process_url(url: str):
             async with semaphore:
                 try:
+                    # MODIFIED: Removed shared session_id to avoid deadlocks with concurrent crawling
                     result = await crawler.arun(
                         url=url,
-                        config=crawl_config,
-                        session_id="session1"
+                        config=crawl_config
                     )
 
                     if result.success:
