@@ -1,0 +1,642 @@
+C:\SeminarCode\WebMall-Interfaces\src\benchmark_rag.py:41: LangChainDeprecationWarning: As of langchain-core 0.3.0, LangChain uses pydantic v2 internally. The langchain.pydantic_v1 module was a compatibility shim for pydantic v1, and should no longer be used. Please update the code to import from Pydantic directly.
+
+For example, replace imports like: `from langchain.pydantic_v1 import BaseModel`
+with: `from pydantic import BaseModel`
+or the v1 compatibility namespace if you are working in a code base that has not been fully upgraded to pydantic 2 yet. 	from pydantic.v1 import BaseModel
+
+  from rag.rag_cart_tools import get_cart_tools, reset_all_carts
+INFO:elastic_transport.transport:GET http://localhost:9200/ [status:200 duration:0.027s]
+INFO:rag.elasticsearch_client:Connected to Elasticsearch: 9.3.2
+INFO:elastic_transport.transport:HEAD http://localhost:9200/webmall_v2 [status:200 duration:0.013s]
+INFO:rag.elasticsearch_client:Index webmall_v2 already exists
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.014s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.145s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.009s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.190s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.006s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.002s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.071s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.162s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.007s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.002s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.300s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.005s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.006s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.218s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.005s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.186s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.006s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.006s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.105s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.006s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.002s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.002s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.101s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.007s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.010s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.290s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.006s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.246s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.006s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.154s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.007s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.234s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.012s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.006s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.107s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.183s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.179s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.158s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.199s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.185s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.260s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.172s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.242s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.271s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.581s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.201s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.581s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.291s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.198s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.401s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.002s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.146s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.006s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.002s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.135s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.006s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.191s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.006s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.002s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.002s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.002s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.001s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.002s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.318s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.016s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.007s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.171s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.006s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.324s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.199s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.118s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.009s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.005s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.006s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.005s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.006s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.006s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.006s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.250s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.016s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.010s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.186s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.213s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.176s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.242s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.461s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.266s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.194s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.196s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.548s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.323s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.159s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.240s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.350s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.371s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.008s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.334s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.144s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.149s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.135s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.152s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.137s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.146s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.288s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.235s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.195s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.237s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.259s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.242s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.289s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.286s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.331s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.285s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.010s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.327s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.009s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.242s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.004s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.222s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.275s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.020s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.005s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.242s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.018s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.185s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.029s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.008s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.223s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.004s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.227s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.006s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.002s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.394s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.022s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.022s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.005s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.182s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.012s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.351s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.193s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.252s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.222s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.183s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.014s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.010s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.221s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.014s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.011s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.006s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.107s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.006s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.009s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.005s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.002s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.135s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.260s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.003s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.005s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.193s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.007s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.002s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.002s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.223s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.003s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.120s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.239s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.062s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.003s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.271s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.287s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.003s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.129s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.117s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.198s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.006s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.221s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.139s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.005s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.002s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.262s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.006s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.231s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.216s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.293s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.225s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.316s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.322s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.309s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.014s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.004s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.008s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.127s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.005s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.002s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.183s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.007s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.010s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.360s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.006s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.003s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.002s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.152s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.007s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.218s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.013s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.232s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.007s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.371s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.014s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_count [status:200 duration:0.002s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.003s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.114s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.185s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.159s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.007s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.002s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.178s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.228s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.263s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.198s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.318s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:elastic_transport.transport:POST http://localhost:9200/webmall_v2/_search [status:200 duration:0.007s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"

@@ -1,0 +1,298 @@
+{
+  "_meta": {
+    "schema_version": 2,
+    "entry_count": 14
+  },
+  "entries": {
+    "specific_product_search": [
+      {
+        "keyword": "specific_product_search",
+        "template": "STRATEGY: The approach involves performing a series of searches for a specific product name using different variations to capture all potential listings across multiple webmall stores. Finally, we gather the details from the relevant product URLs found.\n\nSTEPS:\n1. search_products(query='<BRAND> <SIZE> <PRODUCT> <SPEC>', match_count=30)\n2. search_products(query='<MODEL>', match_count=30)\n3. search_products(query='<BRAND> <MODEL> <PRODUCT> <SIZE>', match_count=50)\n4. search_products(query='<BRAND> <PRODUCT> <MODEL>', match_count=50)\n5. get_product_details(n_urls=1)\n\nNOTES: Must check all 4 stores for the most comprehensive result set.",
+        "signature": {
+          "keyword": "specific_product_search",
+          "has_url": false,
+          "asks_cheapest": false,
+          "has_numbers": true,
+          "numbers_bucket": 1,
+          "tags": [
+            "monitor"
+          ]
+        },
+        "gate_key": "kw=specific_product_search|url=0|cheap=0|num=any|family=monitor|behavior=none",
+        "quality_score": 1.0,
+        "support_count": 1,
+        "usage_count": 0,
+        "source_task_excerpt": "\\nFind all offers for the Asus 43\" ROG STRIX 4K UHD DSC Gaming Monitor (XG43UQ).\\n",
+        "pitfalls": []
+      },
+      {
+        "keyword": "specific_product_search",
+        "template": "STRATEGY: The agent will perform a search for a specific product using its name, then retrieve details from multiple stores to compile a comprehensive list of offers available for that product.\n\nSTEPS:\n1. search_products(query='<PRODUCT>', match_count=30)\n2. get_product_details(n_urls=3-8)\n\nNOTES: Must ensure to check all 4 stores for the product's availability and compare offers.",
+        "signature": {
+          "keyword": "specific_product_search",
+          "has_url": false,
+          "asks_cheapest": false,
+          "has_numbers": false,
+          "numbers_bucket": 0,
+          "tags": [
+            "gpu"
+          ]
+        },
+        "gate_key": "kw=specific_product_search|url=0|cheap=0|num=any|family=gpu|behavior=none",
+        "quality_score": 1.0,
+        "support_count": 1,
+        "usage_count": 0,
+        "source_task_excerpt": "\\nFind all offers for the ASUS DUAL RTX4060 EVO OC GPU.\\n",
+        "pitfalls": []
+      },
+      {
+        "keyword": "specific_product_search",
+        "template": "STRATEGY: The user specifies a type of product. The agent will search for that product using its exact name, aggregating results from multiple webmall stores to gather all offers available.  \nSTEPS:  \n1. search_products(query='<PRODUCT>', match_count=15)  \n2. get_product_details(n_urls=1-4)  \n\nNOTES: Ensure to return URLs from all 4 webmall stores for comprehensive offers.",
+        "signature": {
+          "keyword": "specific_product_search",
+          "has_url": false,
+          "asks_cheapest": false,
+          "has_numbers": true,
+          "numbers_bucket": 3,
+          "tags": [
+            "memory"
+          ]
+        },
+        "gate_key": "kw=specific_product_search|url=0|cheap=0|num=any|family=memory|behavior=none",
+        "quality_score": 1.0,
+        "support_count": 1,
+        "usage_count": 0,
+        "source_task_excerpt": "\\nFind all offers for a Corsair Vengeance 32GB Kit (2 x 16GB) DDR5.\\n",
+        "pitfalls": []
+      },
+      {
+        "keyword": "specific_product_search",
+        "template": "STRATEGY: The user identifies a specific product for search. The plan involves searching for that product across multiple webmall stores to gather all matching URLs for further review.  \nSTEPS:  \n1. search_products(query='<PRODUCT>', match_count=30)  \n2. get_product_details(n_urls=3-8)  \nNOTES: Must check all 4 stores to ensure all offers are captured.",
+        "signature": {
+          "keyword": "specific_product_search",
+          "has_url": false,
+          "asks_cheapest": false,
+          "has_numbers": true,
+          "numbers_bucket": 1,
+          "tags": [
+            "keyboard"
+          ]
+        },
+        "gate_key": "kw=specific_product_search|url=0|cheap=0|num=any|family=keyboard|behavior=none",
+        "quality_score": 1.0,
+        "support_count": 1,
+        "usage_count": 0,
+        "source_task_excerpt": "\\nFind all offers for the ASUS ROG FALCHION ACE Compact 65% Keyboard.\\n",
+        "pitfalls": []
+      }
+    ],
+    "cheapest_specific_search": [
+      {
+        "keyword": "cheapest_specific_search",
+        "template": "STRATEGY: The user wants the cheapest product that matches specific technical specifications. The plan begins with a broad search to gather options and then narrows down to ensure all specified constraints are met before selecting the lowest-priced option.\n\nSTEPS:\n1. search_products(query='<SPEC>', match_count=15)\n2. search_products(query='<SPEC>', match_count=30)\n3. get_product_details(n_urls=5-10)\n4. checkout_webmall_<1-4>(...) [for the selected lowest price product]\n5. add_to_cart_webmall_<1-4>(...) [if necessary]\n\nNOTES: Must ensure that all specifications are fully satisfied before finalizing the product selection.",
+        "signature": {
+          "keyword": "cheapest_specific_search",
+          "has_url": false,
+          "asks_cheapest": false,
+          "has_numbers": true,
+          "numbers_bucket": 1,
+          "tags": [
+            "memory"
+          ]
+        },
+        "gate_key": "kw=cheapest_specific_search|url=0|cheap=0|num=1|family=memory|behavior=none",
+        "quality_score": 1.0,
+        "support_count": 1,
+        "usage_count": 0,
+        "source_task_excerpt": "\\nFind all offers for DDR4 2x16 GB RAM Kits with 3000MHz.\\n",
+        "pitfalls": []
+      },
+      {
+        "keyword": "cheapest_specific_search",
+        "template": "STRATEGY: The user seeks the lowest-priced product that matches specific technical specifications by performing a broad search initially and then filtering for exact matches before selecting the best price.  \nSTEPS:  \n1. search_products(query='<BRAND> <PRODUCT> <SPEC>', match_count=30)  \n2. search_products(query='<BRAND> <SPEC> <PRODUCT>', match_count=30)  \n3. search_products(query='<SPEC> <PRODUCT> <BRAND>', match_count=30)  \n4. get_product_details(n_urls=5-10)  \n5. add_to_cart_webmall_<1-4>(...)  \nNOTES: Must ensure all specifications are strictly met before considering a product for purchase.",
+        "signature": {
+          "keyword": "cheapest_specific_search",
+          "has_url": false,
+          "asks_cheapest": false,
+          "has_numbers": true,
+          "numbers_bucket": 2,
+          "tags": [
+            "cooling",
+            "gpu"
+          ]
+        },
+        "gate_key": "kw=cheapest_specific_search|url=0|cheap=0|num=2|family=cooling,gpu|behavior=none",
+        "quality_score": 1.1111111111111112,
+        "support_count": 1,
+        "usage_count": 0,
+        "source_task_excerpt": "\\nFind all offers for Fractal Design PC Gaming Cases which support 240mm radiators and 330mm GPUs.\\n",
+        "pitfalls": []
+      },
+      {
+        "keyword": "cheapest_specific_search",
+        "template": "STRATEGY: The user wants to find the cheapest product that meets specific specifications. The approach first involves a broad search to gather potential candidates, followed by a detailed check against the specified criteria to identify the lowest-priced compliant product.\n\nSTEPS:\n1. search_products(query='<PRODUCT> <SPEC>', match_count=30)\n2. get_product_details(n_urls=3-8)\n3. add_to_cart_webmall_<1-4>(...) \n4. checkout_webmall_<1-4>(...) \n\nNOTES: Must ensure that all products meet the specified criteria before considering their prices.",
+        "signature": {
+          "keyword": "cheapest_specific_search",
+          "has_url": false,
+          "asks_cheapest": false,
+          "has_numbers": true,
+          "numbers_bucket": 1,
+          "tags": [
+            "connector"
+          ]
+        },
+        "gate_key": "kw=cheapest_specific_search|url=0|cheap=0|num=1|family=connector|behavior=none",
+        "quality_score": 1.0,
+        "support_count": 1,
+        "usage_count": 0,
+        "source_task_excerpt": "\\nFind all offers for the Hama High Speed HDMI Cable with a length of exactly 3 Meters.\\n",
+        "pitfalls": []
+      }
+    ],
+    "cheapest_product_search": [
+      {
+        "keyword": "cheapest_product_search",
+        "template": "STRATEGY: The goal is to find the cheapest option for a specific named product across multiple stores, compare the prices, and return URLs with the lowest price. The process involves searching for the product, gathering details from each store, and identifying the best offers.\n\nSTEPS:\n1. search_products(query='<PRODUCT>', match_count=30)\n2. get_product_details(n_urls=3)\n3. search_products(query='<PRODUCT>', match_count=30)\n4. get_product_details(n_urls=3)\n5. search_products(query='<PRODUCT>', match_count=30)\n\nNOTES: Must check all 4 stores for the cheapest option and compare prices across them.",
+        "signature": {
+          "keyword": "cheapest_product_search",
+          "has_url": false,
+          "asks_cheapest": true,
+          "has_numbers": true,
+          "numbers_bucket": 1,
+          "tags": []
+        },
+        "gate_key": "kw=cheapest_product_search|url=0|cheap=1|num=any|family=none|behavior=none",
+        "quality_score": 1.0,
+        "support_count": 1,
+        "usage_count": 0,
+        "source_task_excerpt": "\\nFind the cheapest offer for a Be Quiet! Pure Base 500 Gaming Case. If multiple offers share the lowest price, return all of them.\\n",
+        "pitfalls": []
+      }
+    ],
+    "compatible_product_search": [
+      {
+        "keyword": "compatible_product_search",
+        "template": "STRATEGY: The user wants to find accessories or parts that are compatible with a specified reference product. The search will be conducted by combining the accessory type with the reference product's brand and model to return all relevant URLs.  \nSTEPS:  \n1. search_products(query='<ACCESSORY_TYPE> <BRAND> <MODEL>', match_count=15)  \n2. get_product_details(n_urls=3-8)  \nNOTES: Ensure to check multiple sources for the most comprehensive results on compatible products.",
+        "signature": {
+          "keyword": "compatible_product_search",
+          "has_url": false,
+          "asks_cheapest": false,
+          "has_numbers": true,
+          "numbers_bucket": 1,
+          "tags": []
+        },
+        "gate_key": "kw=compatible_product_search|url=0|cheap=0|num=1|family=none|behavior=none",
+        "quality_score": 1.0,
+        "support_count": 1,
+        "usage_count": 0,
+        "source_task_excerpt": "\\nFind all offers for orange straps that fit with the Apple Watch Series 6.\\n",
+        "pitfalls": []
+      }
+    ],
+    "vague_product_search": [
+      {
+        "keyword": "vague_product_search",
+        "template": "STRATEGY: Conduct broad searches using variations of keywords related to the user's specified requirements, then retrieve details from a selection of products to ensure they meet the necessary specifications. Collect URLs from all applicable stores.  \nSTEPS:  \n1. search_products(query='<PRODUCT> <FEATURE> <ACCESSORY>', match_count=30)  \n2. search_products(query='<PRODUCT> <ACCESSORY> <FEATURE>', match_count=30)  \n3. search_products(query='<FEATURE> <PRODUCT>', match_count=30)  \n4. get_product_details(n_urls=3-8)  \n5. get_product_details(n_urls=3-8)  \nNOTES: Ensure that all features and accessories meet the user's requirements, and confirm product specifications across different stores for comprehensive options.",
+        "signature": {
+          "keyword": "vague_product_search",
+          "has_url": false,
+          "asks_cheapest": false,
+          "has_numbers": false,
+          "numbers_bucket": 0,
+          "tags": []
+        },
+        "gate_key": "kw=vague_product_search|url=0|cheap=0|num=0|family=none|behavior=none",
+        "quality_score": 1.0,
+        "support_count": 2,
+        "usage_count": 0,
+        "source_task_excerpt": "\\nFind all offers for Apple smart watches.\\n",
+        "pitfalls": []
+      },
+      {
+        "keyword": "vague_product_search",
+        "template": "STRATEGY: Conduct broad searches using various keyword combinations to identify relevant products based on the user's requirements, then retrieve details to ensure the specifications align with the needs before returning the matching listings from different stores.\n\nSTEPS:\n1. search_products(query='<PRODUCT> <SPEC>', match_count=30)\n2. search_products(query='<BRAND> <SPEC>', match_count=30)\n3. search_products(query='<PRODUCT> <SIZE>', match_count=30)\n4. get_product_details(n_urls=3-8)\n5. get_product_details(n_urls=3-8)\n\nNOTES: Ensure that specifications are thoroughly validated to meet the user's requirements; check multiple store offerings for comprehensive options.",
+        "signature": {
+          "keyword": "vague_product_search",
+          "has_url": false,
+          "asks_cheapest": false,
+          "has_numbers": true,
+          "numbers_bucket": 1,
+          "tags": [
+            "memory",
+            "motherboard"
+          ]
+        },
+        "gate_key": "kw=vague_product_search|url=0|cheap=0|num=1|family=memory,motherboard|behavior=none",
+        "quality_score": 1.0,
+        "support_count": 1,
+        "usage_count": 0,
+        "source_task_excerpt": "\\nFind all offers for Asrock motherboards which have 8 DDR5 RAM slots\\n",
+        "pitfalls": []
+      },
+      {
+        "keyword": "vague_product_search",
+        "template": "STRATEGY: The approach involves conducting multiple broad searches based on the user's vague requirements to capture a variety of options, followed by retrieving detailed product information to ensure specifications align with the user's needs. Finally, the URLs for all matching products will be presented for review.  \nSTEPS:  \n1. search_products(query='<VAGUE_TERM_1>', match_count=15)  \n2. search_products(query='<VAGUE_TERM_2>', match_count=30)  \n3. search_products(query='<VAGUE_TERM_3>', match_count=30)  \n4. get_product_details(n_urls=3-8)  \nNOTES: Ensure to verify specifications match user requirements across all returned results.",
+        "signature": {
+          "keyword": "vague_product_search",
+          "has_url": false,
+          "asks_cheapest": false,
+          "has_numbers": false,
+          "numbers_bucket": 0,
+          "tags": [
+            "storage"
+          ]
+        },
+        "gate_key": "kw=vague_product_search|url=0|cheap=0|num=0|family=storage|behavior=none",
+        "quality_score": 1.0,
+        "support_count": 1,
+        "usage_count": 0,
+        "source_task_excerpt": "\\nFind all offers for  NVMe SSDs from Team which support PCIe4.\\n",
+        "pitfalls": []
+      },
+      {
+        "keyword": "vague_product_search",
+        "template": "STRATEGY: Conduct broad searches using various keyword combinations related to the user's requirements, then retrieve product details to ensure specifications meet the criteria. Return URLs from all matching stores for further review.\n\nSTEPS:\n1. search_products(query='<BRAND> AIO <SPEC> <FEATURE>', match_count=30)\n2. search_products(query='<BRAND> <TYPE> <FEATURE>', match_count=30)\n3. search_products(query='<TYPE> with <FEATURE>', match_count=30)\n4. get_product_details(n_urls=16)\n\nNOTES: Must ensure that all specifications are verified before presenting options, and check across multiple stores for the best listings.",
+        "signature": {
+          "keyword": "vague_product_search",
+          "has_url": false,
+          "asks_cheapest": false,
+          "has_numbers": false,
+          "numbers_bucket": 0,
+          "tags": [
+            "cooling",
+            "cpu",
+            "monitor"
+          ]
+        },
+        "gate_key": "kw=vague_product_search|url=0|cheap=0|num=0|family=cooling,cpu,monitor|behavior=none",
+        "quality_score": 1.1764705882352942,
+        "support_count": 1,
+        "usage_count": 0,
+        "source_task_excerpt": "\\nFind all offers for AIO liquid cpu coolers from ASUS which can display GIFs.\\n",
+        "pitfalls": []
+      }
+    ],
+    "cheapest_vague_search": [
+      {
+        "keyword": "cheapest_vague_search",
+        "template": "STRATEGY: The agent will search for products that fit a general use-case, gather details to ensure they meet the requirements, and then identify the lowest-priced option among the candidates. \n\nSTEPS:\n1. search_products(query='<USE_CASE_PRODUCT>', match_count=30)\n2. get_product_details(n_urls=8)\n3. search_products(query='<ALTERNATIVE_USE_CASE_PRODUCT>', match_count=30)\n4. get_product_details(n_urls=8)\n5. checkout_webmall_<1-4>(...) \n\nNOTES: Ensure that all candidate products are appropriate for their given use-case before determining the cheapest option.",
+        "signature": {
+          "keyword": "cheapest_vague_search",
+          "has_url": false,
+          "asks_cheapest": true,
+          "has_numbers": false,
+          "numbers_bucket": 0,
+          "tags": [
+            "keyboard"
+          ]
+        },
+        "gate_key": "kw=cheapest_vague_search|url=0|cheap=1|num=0|family=keyboard|behavior=none",
+        "quality_score": 1.0,
+        "support_count": 1,
+        "usage_count": 0,
+        "source_task_excerpt": "\\nFind the cheapest offer for a mechanical keyboard. If multiple offers share the lowest price, return all of them.\\n",
+        "pitfalls": []
+      }
+    ]
+  }
+}
